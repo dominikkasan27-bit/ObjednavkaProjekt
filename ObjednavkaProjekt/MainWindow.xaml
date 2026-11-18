@@ -1,0 +1,52 @@
+﻿<Window x:Class="ObjednavkaProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObjednavkaProjekt"
+        mc:Ignorable="d"
+         Title="Výpočet ceny objednávky"
+        Height="320"
+        Width="440"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Cena objednávky (Kč):"/>
+            <TextBox x:Name="txtCena"
+                     Height="28"
+                     Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,15">
+            <TextBlock Text="Způsob dopravy:"/>
+            <ComboBox x:Name="cmbDoprava"
+                      Height="28"
+                      SelectedIndex="0"
+                      Margin="0,5,0,0">
+                <ComboBoxItem Content="Standardní"/>
+                <ComboBoxItem Content="Expresní"/>
+                <ComboBoxItem Content="Osobní odběr"/>
+            </ComboBox>
+        </StackPanel>
+
+        <Button Grid.Row="2"
+                x:Name="btnVypocitat"
+                Height="35"
+                Content="Vypočítat cenu"
+                Click="btnVypocitat_Click"/>
+
+        <TextBlock Grid.Row="3"
+                   x:Name="txtVysledek"
+                   Margin="0,20,0,0"
+                   FontSize="18"
+                   FontWeight="Bold"/>
+    </Grid>
+</Window>
