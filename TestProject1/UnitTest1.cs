@@ -58,7 +58,7 @@ namespace TestProject1
 
             Assert.Equal(ocekavanaCena, celkem);
         }
-
+        
         [Fact]
         public void Konstruktor_NastaviVlastnostiObjednavky()
         {
@@ -66,6 +66,7 @@ namespace TestProject1
 
             Assert.Equal(1234.56m, objednavka.CenaZbozi);
             Assert.Equal(1, objednavka.TypDopravy);
+
         }
     }
 }
